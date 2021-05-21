@@ -14,18 +14,24 @@
  *                of the getScore() method into scoring(int points) and replaced this inside the method.
  *      - Divergent change
  *          --> Extract class
- *              *We consolidated the tennis scoring system into a final private array field, such that,
- *              any method requiring scores could access this variable.  Any changes to the scoring system, will only
- *              have to be made once to the actual variable. And no runtime modifications are possible.
- *              *Scoring system variable SCORES.
+ *              * We consolidated the tennis scoring system into a final private array field, such that,
+ *                any method requiring scores could access this variable.  Any changes to the scoring system, will only
+ *                have to be made once to the actual variable. And no runtime modifications are possible.
+ *              * Scoring system variable SCORES.
+ *      - Dead Code
+ *          --> After applying the refactoring methods above, we also removed the instance fields:
+ *                public String P1res = "";
+ *                public String P2res = "";
+ *              as they had become unused and were therefore unnecessary for the class.
  *
  */
 public class TennisGame {
-    private int P1point = 0;        //TODO make these private ?
-    private int P2point = 0;        //TODO make these private ?
+    public int P1point = 0;
+    public int P2point = 0;
 
-    public String P1res = "";       //TODO DELETE
-    public String P2res = "";       //TODO DELETE
+    // deleted instance variables
+    // dead code
+
     private String player1Name;
     private String player2Name;
     final private String[] SCORES = {"Love", "Fifteen", "Thirty", "Forty"};
