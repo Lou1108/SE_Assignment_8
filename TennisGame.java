@@ -34,7 +34,7 @@ public class TennisGame {
 
     private String player1Name;
     private String player2Name;
-    final private String[] SCORES = {"Love", "Fifteen", "Thirty", "Forty"};
+    final private String[] SCORES = {"Love", "Fifteen", "Thirty", "Forty"};         //Consolidated scoring system
 
     public TennisGame(String player1Name, String player2Name) {
         this.player1Name = player1Name;
