@@ -12,6 +12,12 @@
  *          --> extract method
  *              * We grouped together the code duplication that occurred in the original if statements
  *                of the getScore() method into scoring(int points) and replaced this inside the method.
+ *      - Divergent change
+ *          --> Extract class
+ *              *We consolidated the tennis scoring system into a final private array field, such that,
+ *              any method requiring scores could access this variable.  Any changes to the scoring system, will only
+ *              have to be made once to the actual variable. And no runtime modifications are possible.
+ *              *Scoring system variable SCORES.
  *
  */
 public class TennisGame {
